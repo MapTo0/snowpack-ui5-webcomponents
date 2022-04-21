@@ -3,6 +3,16 @@
 <html>
     <head>
         <script type="module">
+            import "@ui5/webcomponents/dist/StepInput.js";
+            import { html, render } from "lit-html";
+
+            class TestElement extends HTMLElement {
+                connectedCallback() {
+                    render(html`<ui5-step-input></ui5-step-input>`, this);
+                }
+            }
+
+            window.customElements.define("test-element", TestElement);
         </script>
     </head>
 
